@@ -1,0 +1,210 @@
+@font-face {font-family: "DancingScript"; src: url("../font/DancingScript.woff2") format("woff2"), url("./font/DancingScript.woff") format("woff");}
+@font-face {font-family: "Gotham"; src: url("../font/Gotham-Medium.woff2") format("woff2"), url("./font/Gotham-Medium.woff") format("woff");}
+@font-face {font-family: "IBMPlexSans"; src: url("../font/IBMPlexSans-Medium.woff2") format("woff2"), url("./font/IBMPlexSans-Medium.woff") format("woff");}
+@font-face {font-family: "NotoSans"; src: url("../font/NotoSans-Regular.woff2") format("woff2"), url("./font/NotoSans-Regular.woff") format("woff");}
+@font-face {font-family: "RedditRedesign"; src: url("../font/RedditRedesign.woff2") format("woff2"), url("./font/RedditRedesign.woff") format("woff");}
+
+.citeResultResolve, .citeResultReject {
+    font: 24px IBMPlexSans;
+}
+
+button {
+    cursor: pointer;
+}
+
+#comment_thread {
+    font: 14px NotoSans;
+    margin: 10px 5%;
+}
+
+.comment {
+    position: relative;
+    background-color: wheat;
+}
+
+.comment_heading {
+    font: 12px IBMPlexSans;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 16px;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.date {
+    color: rgb(124, 124, 124);
+}
+
+.head, .portalElement{
+    margin: 0 4px;
+    display: inline-block;
+}
+
+.portalElement {
+    font: 700 12px IBMPlexSans;
+    color: rgb(135, 138, 140);
+    line-height: 20px;
+
+}
+
+.comment_body, .comment_portal {
+    margin-left: 40px;
+}
+
+.comment_portal {
+    display: flex;
+    height: 40px;
+}
+
+.replies {
+    margin-left: 20px;
+}
+
+.threadLine {
+    border-right: 2px solid white;
+    top: 50px;
+    display: block;
+    height: calc(100% - 50px);
+    width: 0px;
+    margin: 0 14px 0 16px;
+    position: absolute;
+} .threadLine:hover {
+    border-right: 2px solid orange;
+    cursor: pointer;
+}
+
+.expand_button::before {
+    font: 20px RedditRedesign;
+    content: "\f18d";
+}
+
+.expand_button {
+    display: none;
+    transition-timing-function: ease-in;
+    transform: translateX(0);
+    margin-left: 8px;
+    margin-right: 8px;
+    transition: width .05s, transform .05s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 12px;
+    line-height: 12px;
+    outline: none;
+    width: 12px;
+}
+
+.vote_button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.comment_portal_reply:hover, .comment_portal_copy:hover {
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+
+.comment_portal_reply::before {
+    font: 20px RedditRedesign;
+    content: "\f15e";
+}
+
+.comment_portal_copy::before {
+    font: 20px RedditRedesign;
+    content: "\f183";
+}
+
+.netVote {
+    margin: 6px;
+    text-align: center;
+    height: 50%;
+    vertical-align: baseline;
+    line-height: 12px;
+}
+
+.upvote {
+    left: 0;
+    padding: 0;
+}
+
+.expand_button {
+    padding: 0;
+    margin: 0 8px;
+}
+
+.comment_portal_vote, .comment_portal_reply, .comment_portal_copy {
+    display: flex;
+    margin: auto 0;
+    height: 24px;
+}
+
+.comment_portal_reply, .comment_portal_copy {
+    padding: 6px 4px;
+}
+
+.comment_body {
+    margin: 0 0 0 40px;
+}
+
+#comment_thread_bar {
+    background-color: transparent;
+    border-top-left-radius:     25px;
+    border-top-right-radius:    25px;
+    background-color: lightyellow;
+}
+
+.comment_editor_init::after {
+    bottom: 0;
+    position: relative;
+    color: grey;
+    content: 'What are your thoughts?';
+    cursor: text;
+    left: 0;
+    top: 0;
+    opacity: 50%;
+}
+
+#c_init::after {
+    bottom: 0;
+    position: relative;
+    color: grey;
+    content: 'Your citation result will show up here.';
+    cursor: text;
+    left: 0;
+    top: 0;
+    opacity: 50%;
+}
+
+#comment_thread_loadmode{
+    margin-left: 25px;
+}
+
+.comment_editor_init {
+    left: 0;
+    position: relative;
+    top: 0;
+}
+
+.upvote::before {
+    font: 20px RedditRedesign;
+    content: "\f2d8";
+} .upvote:hover {
+    color: yellow;
+    background-color: grey;
+}
+
+.downvote::before {
+    font: 20px RedditRedesign;
+    content: "\f17e";
+} .downvote:hover {
+    color: blue;
+    background-color: grey;
+}

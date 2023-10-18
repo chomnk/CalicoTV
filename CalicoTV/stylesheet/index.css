@@ -1,0 +1,136 @@
+@font-face {font-family: "DancingScript"; src: url("../font/DancingScript.woff2") format("woff2"), url("./font/DancingScript.woff") format("woff");}
+@font-face {font-family: "Gotham"; src: url("../font/Gotham-Medium.woff2") format("woff2"), url("./font/Gotham-Medium.woff") format("woff");}
+@font-face {font-family: "IBMPlexSans"; src: url("../font/IBMPlexSans-Medium.woff2") format("woff2"), url("./font/IBMPlexSans-Medium.woff") format("woff");}
+@font-face {font-family: "NotoSans"; src: url("../font/NotoSans-Regular.woff2") format("woff2"), url("./font/NotoSans-Regular.woff") format("woff");}
+@font-face {font-family: "RedditRedesign"; src: url("../font/RedditRedesign.woff2") format("woff2"), url("./font/RedditRedesign.woff") format("woff");}
+
+body {
+    background: url("../image/orangeBox.png") repeat;
+    margin: 0;
+}
+
+header {
+    z-index: 99;
+    width: calc(100% - 40px);
+    height: 48px;
+    background: local white;
+    position: fixed;
+    padding: 0 20px;
+    top: 0;
+}
+
+#logo {
+    width: 32px;
+    height: 32px;
+    margin: 8px 8px 8px 0;
+}
+
+#title_container {
+    display: inline-block;
+    position: absolute;
+}
+
+#title {
+    font: xx-large DancingScript;
+    margin: 0;
+    line-height: 48px;
+}
+
+.header_element {
+    height: 32px;
+    float: right;
+    margin: 8px 4px;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.comment_header_container {
+    display: flex;
+    background: padding-box linear-gradient(
+        180deg,
+        hsla(0,0%,100%,.1) 45.96%,
+        hsla(0,0%,100%,.57) 46%,
+        hsla(0,0%,100%,0) 130%
+    ), #ffe10d;
+    box-shadow: 0 2px 0 #eed000;
+    border-radius: 9999px;
+}
+
+.header_element_words {
+    padding: 0 16px 0 4px;
+    font: 16px IBMPlexSans;
+    line-height: 32px;
+}
+
+#comment_header_tv, #comment_header_music, #comment_header_login, #comment_header_friend {
+    margin: 6px 0 6px 16px;
+}
+
+#comment_header_tv::before {
+    font: 20px RedditRedesign;
+    content: "\f2c0";
+}
+
+#comment_header_music::before {
+    font: 20px RedditRedesign;
+    content: "\f2ae";
+}
+
+#comment_header_login::before {
+    font: 20px RedditRedesign;
+    content: "\f24d";
+}
+
+#comment_header_friend::before {
+    font: 20px RedditRedesign;
+    content: "\f1dc";
+}
+
+.content_block {
+    width: 90%;
+    height: 400px;
+    font: medium IBMPlexSans;
+    padding: 0 5%;
+    z-index: -998;
+}
+
+.content_block_left { 
+    width: 50%; 
+    float: left; 
+}
+
+.content_block_right { 
+    width: 50%; 
+    float: right; 
+}
+
+#meow_button_container {
+    width: calc(50% - 25px);
+    height: 350px;
+}
+
+#meow_button {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 50px 0 0 0;
+    padding: 0;
+    background: url("../image/calicoCat25.jpeg") round;
+    border-radius: 25px;
+    cursor: pointer;
+    font: 32px Gotham;
+    color: orange;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(5, 52px);
+}
+
+.textbox_text {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
+}

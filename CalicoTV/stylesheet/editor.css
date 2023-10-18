@@ -1,0 +1,70 @@
+.emoji_board {
+    display: grid;
+    grid-template-columns: repeat(5, 52px);
+}
+
+.emoji_button {
+    width: 48px;
+    height: 48px;
+    margin: 2px;
+    background-size:100% 100%;
+    border: 0;
+    padding: 0;
+}
+
+.textbox_text, .textbox_emoji {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-size: 100% 100%;
+}
+
+.textbox_text {
+    text-align: center;
+}
+
+.comment_editor_header {
+    background-color: grey;
+    color: whitesmoke;
+    height: 32px;
+}
+
+.comment_editor_main {
+    outline: none; 
+    overflow-wrap: break-word;
+    overflow: hidden;
+    resize: vertical;
+    direction: ltr;
+    text-align: start;
+    min-width: 120px;
+    min-height: 90px;
+    max-width: 400px;
+    max-height: 300px;
+    background-color: wheat;
+}
+
+.comment_editor_portal {
+    background-color: wheat;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid grey;
+}
+
+.emoji, .submit {
+    align-items: center;
+    border-radius: 9999px;
+    margin: 4px 8px;
+    height: 24px;
+    font: 12px Noto_Sans;
+    font-weight: 700;
+    background-color: orange;
+}
+
+[contentEditable=true]:empty ~ div > .submit {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+[contentEditable=true]:empty:after {
+    color: rgb(135, 138, 140);
+    content: "What are your thoughts?";
+}

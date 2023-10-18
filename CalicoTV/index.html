@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="apple-touch-icon" sizes="180x180" href="/metadata/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/metadata/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/metadata/favicon-16x16.png">
+        <link rel="manifest" href="/metadata/site.webmanifest">
+        <link rel="mask-icon" href="/metadata/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <title>CalicoTV: Where Calico & Orange & White Orange Cats Live</title>
+        <link href="./stylesheet/index.css" rel="stylesheet">
+        <link href="./stylesheet/comment.css" rel="stylesheet">
+
+        <link href="stylesheet/editor.css" rel="stylesheet">
+
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="./image/logo.svg">
+            <div id="title_container">
+                <p id="title">CalicoTV</p>
+            </div>
+            <button type="button" class="header_element" onclick="window.open('tv.html', 'TV')">
+                <div class="comment_header_container">
+                    <i id="comment_header_tv"></i>
+                    <span class="header_element_words">TV(Unstable)</span>
+                </div>
+            </button>
+            <button type="button" class="header_element" title="Currently unavailable" disabled>
+                <div class="comment_header_container">
+                    <i id="comment_header_music"></i>
+                    <span class="header_element_words">Music</span>
+                </div>
+            </button>
+            <button type="button" class="header_element" title="Currently unavailable" disabled>
+                <div class="comment_header_container">
+                    <i id="comment_header_login"></i>
+                    <span class="header_element_words">Login</span>
+                </div>
+            </button>     
+            <button type="button" class="header_element" onclick="window.open('http:\/\/motions.cat', 'Eveonecat')">
+                <div class="comment_header_container">
+                    <i id="comment_header_friend"></i>
+                    <span class="header_element_words">More cats!</span>
+                </div>
+            </button>   
+        </header>
+        <div class="content_block">
+            <div id="meow_button_container" class="content_block_left">
+                <button id="meow_button">Click her to play the MEOW～</button>
+            </div>
+        </div>
+        <div id="test"></div>
+        <div id="comment_thread">
+            <div id="comment_thread_bar">
+                <div id="comment_thread_loadmode">Comments:
+                    <input type="radio" value="date" name="comment_thread_loadmode_element" checked>Sort by time
+                    <input type="radio" value="vote" name="comment_thread_loadmode_element">Sort by vote
+                </div>
+            </div>
+        </div>
+        <div id="output_container"></div>
+        <script src="editor.jsx" type="text/babel"></script> 
+        <script src="commentSnippet.js"></script>
+    </body>
+</html>
